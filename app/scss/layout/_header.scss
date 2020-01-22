@@ -1,0 +1,12 @@
+//Default header element styling
+.header {
+  height: auto;
+  background-color: $accent;
+  @include heading-color($white);
+}
+
+.header-full {
+    height: 100vh;
+    background-color: $accent;
+    // @include heading-color($white);
+}

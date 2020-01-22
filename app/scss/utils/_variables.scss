@@ -1,0 +1,56 @@
+// Default z-index values for elements
+$zindex-dropdown:          900;
+$zindex-sticky:            910;
+$zindex-fixed:             920;
+$zindex-modal-backdrop:    930;
+$zindex-modal:             940;
+$zindex-popover:           950;
+$zindex-tooltip:           960;
+
+
+
+//gutter sizes
+$gutter: 15px;
+$gutter-big: 30px;
+$gutter-large: 60px;
+
+//grid and breakpoint sizes
+$grid-max-width: 1200px + ($gutter-big * 2);
+$grid-columns: 12;
+//breakpoints that are being used for responsive purposes
+$breakpoint-lg: 1200px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 480px;
+
+$breakpoints: (
+        'lg' '(min-width: ' + $breakpoint-lg + ')',
+        'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
+        'sm' '(max-width:'  + ($breakpoint-md - 1) + ')',
+        'xs' '(max-width: ' + $breakpoint-sm + ')'
+);
+
+//box shadows
+$box-shadow-obvious: 0 15px 25px 0 rgba(0,0,0,0.2);
+$box-shadow-distant: 0 10px 15px 0 rgba(0,0,0,0.15);
+$box-shadow-subtle:  0 5px 10px 0 rgba(0,0,0,0.1);
+
+
+//***************** Breakpoints *****************
+$mobile:           "only screen and (max-width: 599px)";
+$tablet:           "only screen and (max-width: 768px)";
+$laptop:           "only screen and (min-width: 1025px)";
+$desktop:          "only screen and (min-width: 1425px)";
+$large-screen:     "only screen and (min-width: 1825px)";
+$retina-display:   "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)";
+
+//***************** Specific Breakpoints *****************
+$big-mobile:       "only screen and (min-width: 400px)";
+$mobile-portrait:  "only screen and (min-width: 320px) and (max-width: 479px)";
+$mobile-landscape: "only screen and (min-width: 480px) and (max-width: 599px)";
+$small-mobile:     "only screen and (max-width: 350px)";
+
+$small-tablet:     "only screen and (min-width: 600px)";
+
+$tablet-portrait:  "only screen and (min-width: 768px) and (orientation: portrait)";
+$tablet-landscape: "only screen and (min-width: 769px) and (orientation: landscape)";
+$ipad-pro:         "only screen and (max-width: 1024px)";

@@ -1,0 +1,161 @@
+@media #{$desktop} {
+  .container {
+    max-width: 1140px;
+  };
+};
+@media #{$ipad-pro} {
+  .container {
+    max-width: 960px;
+  };
+  .row {
+    padding-left: 15px;
+    padding-right: 15px;
+    &--no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  //Class for hiding element,divs and rows on mobile
+  .hide-on-tablet {
+    display: none;
+  }
+  .site-nu-radio__radio:after {
+    top: 5px;
+    left: 4px;
+  }
+  [class^="col"] {
+    padding-bottom: 20px;
+
+  }
+  .rectangle {
+    &--icon-box-tablet {
+      height: 90px;
+    }
+    &--color-box-tablet {
+      height: 205px;
+    }
+  }
+}
+@media #{$tablet} {
+  .container {
+    max-width: 960px;
+  };
+  .row {
+    padding-left: 15px;
+    padding-right: 15px;
+    &--no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  //Class for hiding element,divs and rows on mobile
+  .hide-on-tablet {
+    display: none;
+  }
+  .site-nu-radio__radio {
+    &:after {
+      top: 5px;
+      left: 4px;
+    }
+  }
+  .btn-sitenu {
+    &--full-width {
+      width: 100%;
+    }
+  }
+  [class^="col"] {
+    padding-bottom: 20px;
+  }
+  .rectangle {
+    &--icon-box-tablet {
+      height: 90px;
+    }
+    &--color-box-tablet {
+      height: 205px;
+    }
+  }
+};
+
+
+@media #{$mobile} {
+  .container {
+    max-width: 720px;
+  };
+  .site-nu-range-slider {
+    &::-webkit-slider-thumb {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .header {
+    h1 {
+      @include font-size(24);
+    }
+  }
+  h1 {
+    @include font-size(54);
+  }
+  h2 {
+    @include font-size(44);
+  }
+  h3 {
+    @include font-size(38);
+  }
+  h4 {
+    @include font-size(32);
+  }
+  h5 {
+    @include font-size(26);
+  }
+  h6 {
+    @include font-size(20);
+  }
+  // different heading elements
+  .heading-h1 {
+    font-size: 32px;
+    &--display-1 {
+      @include font-size(38);
+    }
+    &--display-2 {
+      @include font-size(34);
+    }
+    &--display-3 {
+      font-size: 28px;
+    }
+
+  }
+  .site-nu-radio__radio {
+    &:after {
+      top: 4px;
+      left: 4px;
+    }
+  }
+  [class^="col"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .rectangle {
+    height: 337px;
+  }
+  .icon {
+    font-size: 80px;
+  }
+  .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  //Class for hiding element,divs and rows on mobile
+  .hide-on-mobile {
+    display: none;
+  }
+  .heading {
+    &--underline {
+      &:after {
+        width: 30%;
+      }
+    }
+  }
+  h2 {
+    font-size: 42px;
+  }
+};

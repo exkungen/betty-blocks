@@ -1,0 +1,43 @@
+.site-nu-switch {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 39px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include border-radius(34px);
+    background-color: $table-border-color;
+    @include transition(.4s all);
+    &:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 0;
+      bottom: 0;
+      background-color: $white;
+      @include border-radius(50%);
+      @include transition(.4s all);
+    }
+  }
+  input:checked + &__slider {
+    background-color: rgba(0, 191, 243,0.3);
+  }
+  input:focus + &__slider {
+    box-shadow: 0 0 1px $accent;
+  }
+  input:checked + &__slider:before {
+    @include transform(translateX(20px));
+    background-color: $accent;
+  }
+}

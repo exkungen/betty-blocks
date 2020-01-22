@@ -1,0 +1,62 @@
+.site-nu-radio {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin-bottom: $gutter-big;
+  input {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    border: 1.6px solid $table-border-color;
+    @include transition(.2s all);
+    background-color: $white;
+    @include border-radius(50%);
+    &--hover {
+      border-color: $accent;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover input ~ &__radio {
+    border-color: $accent;
+  }
+  input:checked ~ &__radio:after {
+    display: block;
+  }
+  input:checked ~ &__radio {
+    background-color: $white;
+    border-color: $accent;
+  }
+  &__radio:after {
+    top: 4px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    @include border-radius(50%);
+    background: $accent;
+  }
+  input:disabled ~ &__radio{
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover {
+      border-color: $table-border-color;
+    }
+  }
+}

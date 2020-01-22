@@ -1,0 +1,58 @@
+
+//spacing element showcasing
+.spacing {
+  height: 60px;
+  position: absolute;
+  bottom: 60px;
+  width: 60px;
+  border: 1px dashed $spacing-border;
+
+  &--tiny {
+    height: 20px;
+    width: 20px;
+  }
+
+  &--small {
+    height: 40px;
+    width: 40px;
+  }
+
+  &--semi {
+    height: 80px;
+    width: 80px;
+  }
+
+  &--large {
+    height: 100px;
+    width: 100px;
+  }
+
+  &--x-large {
+    height: 120px;
+    width: 120px;
+  }
+}
+//class to create more white space between elements
+.padding-spacing {
+  padding-top: 60px;
+
+  &--tiny {
+    padding-top: 20px;
+  }
+
+  &--small {
+    padding-top: 40px;
+  }
+
+  &--semi {
+    padding-top: 80px;
+  }
+
+  &--large {
+    padding-top: 100px;
+  }
+
+  &--x-large {
+    padding-top: 120px;
+  }
+}

@@ -1,0 +1,78 @@
+.btn-sitenu {
+  outline: none;
+  border: 2px solid $accent;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 25px;
+  color: $accent;
+  @include font-styling-poppins;
+  letter-spacing: 1px;
+  background-color: transparent;
+  padding: 15px 35px;
+  @include transition(.2s all);
+  cursor: pointer;
+  text-transform: uppercase;
+  @include font-size(14);
+  &:hover {
+    background-color: $accent;
+    color: $white;
+  }
+  //for showcasing hover effect
+  &--hover {
+    background-color: $accent;
+    color: $white;
+  }
+  //modifier to make the default button squared instead of rounded
+  &--squared {
+    border-radius: 0;
+  }
+
+  //modifier to make the default button a different color
+  &--accent {
+    border: 2px solid $white;
+    background-color: $accent;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $accent;
+    }
+  }
+  &--accent-hover {
+    background-color: $white;
+    color: $accent;
+  }
+  //modifier to make a small button
+  &--small {
+    border: 0;
+    color: $black;
+    &:hover {
+      background-color: $white;
+      color: $accent;
+    }
+  }
+  &--small-hover {
+    background-color: $white;
+    color: $accent;
+  }
+  //modifier to make a call to action button
+  &--cta {
+    padding: 15px 25px;
+    background-color: $accent;
+    color: $white;
+
+    &:hover {
+      background-color: darken($accent, 15%);
+      border: 2px solid darken($accent, 15%);
+    }
+  }
+  &--cta-hover {
+    background-color: darken($accent, 15%);
+    border: 2px solid darken($accent, 15%);
+  }
+  //modifier to make the button full width depending on the parent column/element
+  &--full-width {
+    width: 80%;
+  }
+}
+;

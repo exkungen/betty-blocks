@@ -1,0 +1,82 @@
+.z-index-showcase {
+  height: 150px;
+  width: 255px;
+  background-color: $pink;
+  z-index: $zindex-dropdown;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--sticky {
+    background-color: $gray-extra-light;
+    z-index: $zindex-sticky;
+    top: 80px;
+    left: 80px;
+  }
+
+  &--fixed {
+    background-color: $light-green;
+    z-index: $zindex-fixed;
+    top: 160px;
+    left: 160px;
+  }
+
+  &--modal-backdrop {
+    background-color: $purple;
+    z-index: $zindex-modal-backdrop;
+    top: 240px;
+    left: 240px;
+  }
+
+  &--modal {
+    background-color: $light-blue;
+    z-index: $zindex-modal;
+    top: 320px;
+    left: 320px;
+  }
+
+  &--popover {
+    background-color: $dark-red;
+    z-index: $zindex-popover;
+    top: 400px;
+    left: 400px;
+  }
+
+  &--tooltip {
+    background-color: $black;
+    z-index: $zindex-tooltip;
+    top: 480px;
+    left: 480px;
+  }
+}
+//zindexing used for different elements
+.z-index {
+  &--dropdown {
+    z-index: $zindex-dropdown;
+  }
+
+  &--dropdown {
+    z-index: $zindex-sticky;
+  }
+
+  &--dropdown {
+    z-index: $zindex-fixed;
+  }
+
+  &--dropdown {
+    z-index: $zindex-modal-backdrop;
+  }
+
+  &--dropdown {
+    z-index: $zindex-modal;
+  }
+
+  &--dropdown {
+    z-index: $zindex-popover;
+  }
+
+  &--dropdown {
+    z-index: $zindex-tooltip;
+  }
+}
+

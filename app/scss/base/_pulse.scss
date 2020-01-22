@@ -1,0 +1,56 @@
+// class that gives a pulse effect around elements depending where being used
+.pulse {
+  &:hover {
+    animation: none;
+  }
+
+  //default keyframes styling and duration
+  @keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+  }
+  animation: shadow-pulse 1s infinite;
+  // short duration of the pulse effect
+  &--short {
+    @keyframes shadow-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+      }
+    }
+    animation: shadow-pulse 1s 1;
+  }
+
+  // medium duration of the pulse effect
+  &--medium {
+    @keyframes shadow-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+      }
+    }
+    animation: shadow-pulse 3s 1;
+  }
+
+  // long duration of the pulse effect
+  &--long {
+    @keyframes shadow-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+      }
+    }
+    animation: shadow-pulse 6s 1;
+  }
+}
+;

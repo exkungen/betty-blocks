@@ -1,0 +1,103 @@
+/**
+ * Grid loop mixin
+ */
+
+@mixin grid-loop($name){
+  @for $i from 0 through $grid-columns {
+    @if $i != 0 {
+      .col-#{$name}-#{$i} {
+        width: percentage($i/$grid-columns);
+        flex-basis: percentage($i/$grid-columns);
+        float: left;
+        padding-left: $gutter-big/2;
+        padding-right: $gutter-big/2;
+        position: relative;
+        box-sizing: border-box;
+        max-width: percentage($i/$grid-columns);
+        &--no-padding {
+          padding: 0;
+        }
+      }
+    }
+    .col-#{$name}-offset-#{$i} {
+      margin-left: percentage($i/$grid-columns);
+    }
+  }
+}
+
+@for $i from 0 through $grid-columns {
+  @if $i != 0 {
+    .col-#{$i} {
+      width: percentage($i/$grid-columns);
+      flex-basis: percentage($i/$grid-columns);
+      float: left;
+      padding-left: $gutter-big/2;
+      padding-right: $gutter-big/2;
+      position: relative;
+      box-sizing: border-box;
+      max-width: percentage($i/$grid-columns);
+    }
+
+  }
+  .col-offset-#{$i} {
+    margin-left: percentage($i/$grid-columns);
+  }
+
+}
+/**
+ * Columns generator
+ */
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+
+  @media only screen and #{$declaration} {
+    @include grid-loop($name);
+  }
+}
+/**
+ * Clearfix
+ */
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+/**
+ * Default variables and helper mixins
+ */
+
+
+
+/**
+ * Grid scaffolding
+ */
+
+%clearfix:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+.row {
+  @extend %clearfix;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+.vertical-center {
+    margin: auto 0;
+}
+
+.row-full-height {
+    height: 100vh;
+}

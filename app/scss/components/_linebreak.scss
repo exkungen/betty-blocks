@@ -1,0 +1,16 @@
+// a linebreak border used beneath elements for layout purposes
+.line-break {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid $gray;
+  //modifier to make the line-break color differ from the original
+  &--accent {
+    border-bottom: 1px solid $accent;
+  }
+  //modifier to make the line-break color differ from the original
+  &--black {
+    border-bottom: 1px solid $black;
+  }
+}

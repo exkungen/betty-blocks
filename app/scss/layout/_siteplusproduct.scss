@@ -1,0 +1,25 @@
+.siteplus-product-header {
+    background: linear-gradient(180deg, rgba(27,29,31,0.1) 0%, rgba(255,255,255,0) 100%);
+    h1 {
+        line-height: 56px;
+    }
+}
+.siteplus-step-1 {
+    position: absolute;
+    display: block;
+    right: -25%;
+    top: -10%;
+    @media #{$mobile} {
+        display: none;
+    }
+}
+
+.siteplus-step-2 {
+    position: absolute;
+    display: block;
+    right: -25%;
+    top: -25%;
+    @media #{$mobile} {
+        display: none;
+    }
+}

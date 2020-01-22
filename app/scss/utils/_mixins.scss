@@ -1,0 +1,201 @@
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      }
+      @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
+$colors: (
+        accent: #00BFFF,
+        black: #1B1D1F,
+        gray: #CCCCCC,
+        light-gray: #F7F7F7,
+        white: #FFFFFF,
+        warning: #FBAB07,
+        error: #FF0000,
+        success: #2BBD00,
+        dark-gray: #52585E
+);
+.text {
+  @include modifiers($colors, 'color', $separator: ':');
+}
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      }
+      @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
+$colors: (
+        accent: #00BFFF,
+        black: #1B1D1F,
+        gray: #CCCCCC,
+        light-gray: #F7F7F7,
+        white: #FFFFFF,
+        warning: #FBAB07,
+        error: #FF0000,
+        success: #2BBD00,
+        dark-gray: #52585E
+);
+.background-color {
+  @include modifiers($colors, 'background-color', $separator: ':');
+}
+
+
+//Quickly center any element within its parent. Requires width or max-width to be set.
+@mixin center-block {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+//Set the opacity for all browsers and provide a filter fallback for IE8.
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Text Overflow
+//An easy way to truncate text with an ellipsis. Requires the element to be block or inline-block.
+//Usage: .text-truncate {
+//  @include text-truncate;
+//}
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//Absolute Positioned
+//Usage: .abs {
+//  @include abs-pos(10px, 10px, 5px, 15px);
+//}
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+//This mixin sets the font size in rem's with a px fallback.
+@mixin line-height($heightValue: 12 ){
+  line-height: (0.125 * $heightValue) + rem;
+  line-height: $heightValue + px; //fallback for old browsers
+}
+//This mixin sets the font size px
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue  + px;
+}
+//This mixin for the default font styling
+// useage:
+// h1 {
+// @include font-styling();
+// }
+@mixin font-styling {
+  font-weight: $bold;
+  color: $black;
+  font-family: 'Playfair Display', serif;
+}
+//This mixin for the seconday font styling
+// useage:
+// h1 {
+// @include font-styling-poppins();
+// }
+@mixin font-styling-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-styling-fira-sans {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+// mixin for border radius + crossbrowser support
+// useage:
+// box {
+// @include border-radius(10px);
+// }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+// transition mixin
+// usage: a {
+//  color: gray;
+//  @include transition(color .3s ease);
+//  &:hover {
+//    color: black;
+//  }
+//}
+//This mixin ensures cross browser opacity all the way down to Internet Explorer 5.
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+// Single side border-radius
+//Usage: .button {
+//  @include border-radius(5px);
+//}
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+//Select all heading colors so its easy to change
+@mixin heading-color($heading-color) {
+  h1 {
+    color: $heading-color;
+  }
+  h2 {
+    color: $heading-color;
+  }
+  h3 {
+    color: $heading-color;
+  }
+  h4 {
+    color: $heading-color;
+  }
+  h5 {
+    color: $heading-color;
+  }
+  h6 {
+    color: $heading-color;
+  }
+}

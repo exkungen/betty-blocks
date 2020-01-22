@@ -1,0 +1,18 @@
+/* Tables */
+
+// make the table 100% width so all the inner table rows get devided equally
+.table {
+  &__head {
+    border: 1px solid $table-border-color;
+    @include font-styling-poppins;
+    padding: $gutter;
+    background-color: $accent;
+    color: $white;
+  }
+  &__column {
+    @include font-styling-poppins;
+    background-color: $white;
+    padding: $gutter;
+    border: 1px solid $table-border-color;
+  }
+}

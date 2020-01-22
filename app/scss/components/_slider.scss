@@ -1,0 +1,27 @@
+.site-nu-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: $gutter-big;
+  height: 12px;
+  @include border-radius(5px);
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  @include transition(opacity .2s);
+  &::-webkit-slider-thumb {
+    width: 30px;
+    -webkit-appearance: none;
+    height: 30px;
+    cursor: ew-resize;
+    background: $accent;
+    @include border-radius(50%);
+    border: 0;
+  }
+  &::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    @include border-radius(50%);
+    background: #4CAF50;
+    cursor: pointer;
+  }
+}

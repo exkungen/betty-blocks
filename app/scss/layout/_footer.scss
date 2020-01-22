@@ -1,0 +1,13 @@
+.footer {
+  height: auto;
+  background-color: $black;
+  @include heading-color($white);
+
+  i {
+    font-size: 25px;
+  }
+  a {
+    font-weight: normal;
+    padding-right: 10px;
+  }
+}

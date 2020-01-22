@@ -1,0 +1,236 @@
+//***************** imports *****************
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+// Font styles and weights
+$italic: italic;
+$bold: bold;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+$light-bold: 600;
+
+//sizes
+$h1: 64px;
+$h2: 54px;
+$h3: 44px;
+$h4: 34px;
+$h5: 26px;
+$h6: 20px;
+
+
+//***************** Typography *****************
+//typography declaration
+
+//specify default font-styling for headers
+h1,h2,h3,h4,h5,h6 {
+  @include font-styling;
+}
+
+// set standard color for all text
+h1,h2,h3,h4,h5,h6,p {
+    color: $black;
+}
+
+a {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.link {
+    &__white-black {
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
+    &__black-white {
+        color: $black;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+//specify default font properties for paragraphs
+.paragraph {
+  &__extra-large {
+    @include font-size(24);
+    @include line-height(34);
+    font-weight: $font-weight-medium;
+  }
+  &__large {
+    @include font-size(18);
+    @include line-height(30);
+  }
+  &__medium {
+    @include font-size(16);
+    @include line-height(28);
+  }
+  &__small {
+    @include font-size(14);
+    @include line-height(26);
+    font-weight: $font-weight-light;
+  }
+  &__extra-small {
+      @include font-size(12);
+      @include line-height(24)
+  }
+}
+//include default font styling
+p {
+  @include font-styling-poppins;
+}
+//default link styling
+a {
+  @include font-size(20);
+  font-weight: $light-bold;
+  color: $accent;
+  transition: .2s all;
+  &:hover {
+    color: darken($accent, 20%);
+  }
+}
+//Declare font sizes to headings
+h1 {
+  font-size: $h1;
+  @include line-height(85);
+
+}
+h2 {
+  font-size: $h2;
+  @include line-height(72);
+}
+h3 {
+  font-size: $h3;
+  @include line-height(59);
+}
+h4 {
+  font-size: $h4;
+  @include line-height(46);
+}
+h5 {
+  font-size: $h5;
+  @include line-height(35);
+}
+h6 {
+  font-size: $h6;
+  @include line-height(27);
+}
+/*  Default font properties */
+.font-italic {
+  font-style: $italic;
+}
+.font-poppins {
+  @include font-styling-poppins;
+}
+.font-fira-sans {
+    @include font-styling-fira-sans;
+}
+.font-weight-normal {
+  font-weight: normal;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+// Heading sizes
+
+.heading-extra-extra-large {
+  @include font-size(64);
+}
+.heading-extra-large {
+  @include font-size(44);
+}
+.heading-large {
+  @include font-size(36);
+}
+.heading-medium {
+  @include font-size(32);
+}
+.heading-small {
+  @include font-size(28);
+}
+.heading-extra-small {
+  @include font-size(24)
+}
+.font-weight-thin {
+  font-weight: 100;
+}
+.font-weight-extra-light {
+  font-weight: 200;
+}
+.font-weight-light {
+  font-weight: 300;
+}
+.font-weight-regular {
+  font-weight: 400;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+.font-weight-extra-bold {
+  font-weight: 800;
+}
+.font-weight-black  {
+  font-weight: 900;
+}
+
+// different heading elements
+.heading-h1 {
+  @include font-styling-poppins;
+  font-size: 32px;
+  &--display-1 {
+    font-size: 44px;
+  }
+  &--display-2 {
+    font-size: 36px;
+  }
+  &--display-3 {
+    font-size: 28px;
+  }
+
+}
+
+//default button styling for this template
+.sub-title {
+  text-transform: uppercase;
+  color: $gray;
+  &--border {
+    &:after {
+      content: ""; /* This is necessary for the pseudo element to work. */
+      display: block; /* This will put the pseudo element on its own line. */
+      width: 100%; /* Change this to whatever width you want. */
+      padding-top: 25px; /* This creates some space between the element and the border. */
+      border-bottom: 1px solid $gray; /* This creates the border. Replace black with whatever color you want. */
+    }
+  }
+}
+
+// A heading class element for titles and/or subtitles
+.heading {
+  //modifier to give a option underline beneath the header for layout purposes
+  &--underline {
+    &:after {
+      content: ""; /* This is necessary for the pseudo element to work. */
+      display: block; /* This will put the pseudo element on its own line. */
+      width: 10%; /* Change this to whatever width you want. */
+      padding-top: 10px; /* This creates some space between the element and the border. */
+      margin-bottom: 10px;
+      border-bottom: 2px solid $accent; /* This creates the border. Replace black with whatever color you want. */
+    }
+    //modifier to make the heading border line a different color
+    &--white {
+      &:after {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }}
+
+.no-decoration {
+    text-decoration: none;
+};

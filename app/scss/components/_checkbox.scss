@@ -1,0 +1,73 @@
+/* Customize the label for the checkbox,radio buttons and slider */
+.site-nu-checkbox {
+  -webkit-user-select: none;
+  display: block;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-bottom: $gutter-big;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  input {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__checkmark {
+    border: 1.6px solid $table-border-color;
+    @include border-radius(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: $white;
+    transition: .2s all;
+    &--hover {
+      border-color: $accent;
+    }
+    &--transparent {
+      background-color: transparent;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &:hover input ~ &__checkmark {
+    border-color: $accent;
+  }
+  &:hover input ~ &__checkmark:after {
+    display: block;
+    transition: .2s;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    @include transform(rotate(45deg))
+  }
+  input:checked ~ &__checkmark {
+    background-color: $accent;
+    border-color: $accent;
+    @include rotate-center();
+  }
+  input:checked ~ &__checkmark:after {
+    display: block;
+  }
+  &__checkmark:after {
+    transition: .2s;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    @include transform(rotate(45deg))
+  }
+};

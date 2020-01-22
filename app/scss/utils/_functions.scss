@@ -1,0 +1,64 @@
+// Generate a height loop
+@for $i from 1 through 100 {
+  .height-#{$i} {
+    height: $i+vh;
+  }
+}
+// Generate a padding loop
+@for $i from 1 through 100 {
+  .padding-#{$i} {
+    padding: $i+em;
+  }
+}
+// Generate a padding-height loop
+@for $i from 1 through 100 {
+  .padding-top-#{$i} {
+    padding-top: $i+vh;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-bottom-#{$i} {
+    padding-bottom: $i+vh;
+  }
+}
+
+@for $i from 1 through 100 {
+  .margin-bottom-#{$i} {
+    margin-bottom: $i+vh;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-side-#{$i} {
+    padding-left: $i+vh;
+    padding-right: $i+vh;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-height-#{$i} {
+    padding: $i+vh 0 $i+vh 0;
+  }
+}
+@for $i from 1 through 10 {
+  .letter-spacing-#{$i} {
+    letter-spacing: $i+px;
+  }
+}
+
+@for $i from 1 through 100 {
+    .padding-mobile-top-#{$i} {
+        @media #{$mobile} {
+            padding-top: $i+vh;
+        }
+    }
+}
+
+@for $i from 1 through 100 {
+    .padding-mobile-bottom-#{$i} {
+        @media #{$mobile} {
+            padding-bottom: $i+vh;
+        }
+    }
+}

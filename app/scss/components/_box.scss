@@ -1,0 +1,50 @@
+/* boxed content element */
+.box {
+  padding: 60px 30px;
+  // modified box color and border color for variaty
+  &--blue {
+    background-color: $accent;
+    color: $white;
+    &:after {
+      border-color: $white;
+    }
+    p {
+        color: $white;
+    }
+  }
+  &--darker-blue {
+    background-color: $darker-blue;
+    color: $white;
+    &:after {
+      border-color: $white;
+    }
+    p {
+        color: $white;
+    }
+  }
+  &--dark-blue {
+    background-color: $dark-blue;
+    color: $white;
+    &:after {
+      border-color: $white;
+    }
+    p {
+        color: $white;
+    }
+  }
+  &--siteplus-purple {
+    background-color: $siteplus-purple;
+    color: $white;
+    &:after {
+      border-color: $white;
+    }
+    p {
+        color: $white;
+    }
+  }
+  &--rounded {
+    border-radius: 5px;
+  }
+
+}
+;

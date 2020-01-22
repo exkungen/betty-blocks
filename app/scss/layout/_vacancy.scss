@@ -1,0 +1,50 @@
+.vacancy-header {
+    background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+}
+.step-col {
+    width: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 20%;
+}
+
+.step-1 {
+    position: absolute;
+    display: block;
+    right: -18%;
+    top: -6%;
+    @media #{$mobile} {
+        display: none;
+    }
+}
+
+.step-2 {
+    position: absolute;
+    display: block;
+    right: -18%;
+    top: -28%;
+    @media #{$mobile} {
+        display: none;
+    }
+}
+
+.step-number {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    border: 2px solid #666;
+    text-align: center;
+}
+
+// .vacancy-menu .col {
+//     @media #{$mobile} {
+//         margin-bottom: 1px;
+//     }
+// }

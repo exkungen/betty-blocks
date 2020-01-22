@@ -1,0 +1,38 @@
+.icon {
+  font-size: 24px;
+  &--big {
+    font-size: 40px;
+  }
+  &--extra-big {
+    font-size: 60px;
+  }
+}
+
+/* Giving default font weight value to icons */
+.fa, .fas {
+  font-weight: 900;
+}
+/* Setting the font family to font awesome so the icons will work */
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
+}
+/* general css styling for every icon to make them look normal */
+.fa, .fab, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+
+.icon-remove {
+  transition: .3s all;
+  margin-left: 5px;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
