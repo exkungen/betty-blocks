@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="dist/css/global.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Menouer Nobach - Contact</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="nav-link" href="/contact">Contact</a></li>
+            <li><a class="nav-link" href="/about">About</a></li>
+            <li><a class="nav-link" href="/">Home</a></li>
+            <li class="float-left"><a href="/">Menouer</a></li>
+          </ul>
+    </nav>
+    <div class="container padding-top-10 padding-bottom-30">
+        <div class="row">
+            <div class="col col-lg-12  col-sm-12 col-md-12">
+                <p class="paragraph__large sub-title padding-height-5 sub-title--border">About</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-12  col-xs-12 col-md-12 padding-top-1 ">
+                <h2>Achtergrond</h2>
+            </div>
+            <div class="col col-lg-12  col-sm-12 col-md-12">
+                <p class="paragraph__large padding-height-5">Mijn naam is Menouer Nobach, ik ben 4 jaar geleden begonnen aan mijn web development studie. Na het succesvol afronden van de studie ben ik als full-stack developer gaan werken bij 'WeConnect'. Nu in 2020 ben ik opzoek naar nieuwe avonturen on mijn carrière als developer voort te zetten.
+
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-12  col-xs-12 col-md-12 padding-top-1">
+                <h2>Over mij</h2>
+            </div>
+            <div class="col col-lg-12  col-sm-12 col-md-12">
+                <p class="paragraph__large padding-height-5">Naast de hele dag achter mijn computer te zitten en op mijn toetsenbord zit te rammen om zo ( hopelijk ) kwalitatief code te schrijven ben ik ook wel minimaal 3 keer per week in de sportschool te vinden.
+                    Opzij van sporten en coderen vind ik een borreltje of een feestje met mijn vrienden nooit een slecht idee ( behalve als ik de volgende ochtend wakker wordt met een kater en mijzelf afvraag waarom ik nou weer zo veel moest drinken ).
+                    Verder in mijn vrije tijd doe ik valuta handel, hier en daar een spelletje, programmeren of lekker achterover op de bank serie kijken op netflix.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-12  col-xs-12 col-md-12 padding-top-1 padding-bottom-2">
+                <h2>Vaardigheden</h2>
+            </div>
+            <div class="col col-lg-6  col-sm-12 col-md-12">
+                <p class="paragraph__large padding-top-2 padding-bottom-2">
+                    Voeg een vaardigheid toe
+                </p>
+                <form method="POST" action="/add_skill">
+                    {{ csrf_tag }}
+                    <input class="input input--squared" name="skill" id="skill">
+                    <button type="submit" class="btn-sitenu btn-sitenu--squared  btn-sitenu--cta btn-sitenu--cta-hover">Voeg toe</button>
+                </form>
+                <form method="POST" action="/delete_skill">
+                    {{ csrf_tag }}
+                    <input class="input input--squared" name="id" id="1" value="1">
+                    <button type="submit" class="btn-sitenu btn-sitenu--squared  btn-sitenu--cta btn-sitenu--cta-hover">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<footer>
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-12 col-sm-12 padding-top-10 centered-contain">
+                    <p class="paragraph__medium text-white">Gemaakt met ❤️ en ☕ door Menouer Nobach</p>
+                </div>
+                <div class="col col-lg-12 col-sm-12 centered-contain padding-bottom-5 padding-top-2">
+                    <a target="_blank" href="https://www.linkedin.com/in/menouer-nobach/"><i class="fab fa-linkedin text-white"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/menouer.nobach"><i class="fab fa-facebook text-white"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="dist/js/vendor.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+</body>
+
+</html>
